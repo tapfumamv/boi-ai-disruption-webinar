@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  <title>BOI | AI Disruption Companion</title>
+  <meta name="description" content="Companion guide to Board of Innovation's webinar: How AI is Disrupting Business Models, presented by Laura Stevens.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Skip to content (accessibility) -->
+  <a href="#hero" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;padding:12px 24px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;border-radius:0 0 8px 0;text-decoration:none;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to content</a>
+
+  <!-- ============================================
+       TOP BAR
+       ============================================ -->
+  <header class="top-bar">
+    <button class="burger-btn" aria-label="Open navigation menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <span class="top-bar__title">BOI | AI DISRUPTION COMPANION</span>
+    <div class="top-bar__actions">
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============================================
+       MOBILE MENU
+       ============================================ -->
+  <div class="menu-overlay" aria-hidden="true"></div>
+  <nav class="menu-panel" aria-label="Mobile navigation">
+    <ul class="nav-list">
+      <li><a href="#hero" class="nav-item"><span class="nav-item__num"></span> Home</a></li>
+      <li><a href="#exec-summary" class="nav-item"><span class="nav-item__num"></span> Summary</a></li>
+      <li><a href="#quick-take" class="nav-item"><span class="nav-item__num"></span> Quick Take</a></li>
+      <li><a href="#overview" class="nav-item"><span class="nav-item__num"></span> Overview</a></li>
+      <li><a href="#comfortable-illusion" class="nav-item"><span class="nav-item__num">01</span> The Comfortable Illusion</a></li>
+      <li><a href="#gpt-frame" class="nav-item"><span class="nav-item__num">02</span> The GPT Frame</a></li>
+      <li><a href="#control" class="nav-item"><span class="nav-item__num">03</span> Control Shifts</a></li>
+      <li><a href="#competition" class="nav-item"><span class="nav-item__num">04</span> Competition</a></li>
+      <li><a href="#value" class="nav-item"><span class="nav-item__num">05</span> Value</a></li>
+      <li><a href="#disruption-index" class="nav-item"><span class="nav-item__num">06</span> Disruption Index</a></li>
+      <li><a href="#how-to-respond" class="nav-item"><span class="nav-item__num">07</span> How to Respond</a></li>
+      <li><a href="#qa" class="nav-item"><span class="nav-item__num"></span> Q&amp;A</a></li>
+      <li><a href="#closing" class="nav-item"><span class="nav-item__num"></span> Closing</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================
+       LAYOUT WRAPPER
+       ============================================ -->
+  <div class="content-wrap">
+
+    <!-- Sidebar Navigation (Desktop) -->
+    <aside class="sidebar" aria-label="Section navigation">
+      <div class="sidebar__label">Contents</div>
+      <ul class="nav-list">
+        <li><a href="#hero" class="nav-item"><span class="nav-item__num"></span> Home</a></li>
+        <li><a href="#exec-summary" class="nav-item"><span class="nav-item__num"></span> Summary</a></li>
+        <li><a href="#quick-take" class="nav-item"><span class="nav-item__num"></span> Quick Take</a></li>
+        <li class="nav-group-label">Act 1: The Problem</li>
+        <li><a href="#comfortable-illusion" class="nav-item"><span class="nav-item__num">01</span> The Comfortable Illusion</a></li>
+        <li><a href="#gpt-frame" class="nav-item"><span class="nav-item__num">02</span> The GPT Frame</a></li>
+        <li class="nav-group-label">Act 2: The Disruption</li>
+        <li><a href="#control" class="nav-item"><span class="nav-item__num">03</span> Control Shifts</a></li>
+        <li><a href="#competition" class="nav-item"><span class="nav-item__num">04</span> Competition</a></li>
+        <li><a href="#value" class="nav-item"><span class="nav-item__num">05</span> Value</a></li>
+        <li class="nav-group-label">Act 3: The Response</li>
+        <li><a href="#disruption-index" class="nav-item"><span class="nav-item__num">06</span> Disruption Index</a></li>
+        <li><a href="#how-to-respond" class="nav-item"><span class="nav-item__num">07</span> How to Respond</a></li>
+        <li><a href="#qa" class="nav-item"><span class="nav-item__num"></span> Q&amp;A</a></li>
+        <li><a href="#closing" class="nav-item"><span class="nav-item__num"></span> Closing</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- ============================================
+           HERO
+           ============================================ -->
+      <section id="hero" class="hero hero--compact">
+        <div class="container hero__grid">
+          <div class="hero__text">
+            <div class="hero__pill">INDEPENDENT COMPANION GUIDE</div>
+            <h1>How AI is Disrupting Your Business Model</h1>
+            <p class="hero__subtitle">Most companies are treating AI as a productivity tool. That's not wrong; it's just dangerously incomplete. This companion guide distils Laura Stevens' landmark webinar into the frameworks, examples, and hard questions your leadership team needs to confront now.</p>
+            <p class="speaker-info"><strong>Laura Stevens</strong> | Managing Director, Board of Innovation</p>
+            <p class="meta-line">45 min &middot; 19 slides &middot; 6 chapters</p>
+          </div>
+          <div class="hero__media">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/roEXHMC6onQ"
+                title="How AI is Disrupting Business Models - Laura Stevens, Board of Innovation"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           EXECUTIVE SUMMARY
+           ============================================ -->
+      <section id="exec-summary" class="exec-summary">
+        <div class="container">
+          <div class="section-icon" aria-hidden="true">
+            <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+          </div>
+          <h2>Executive Summary</h2>
+          <div class="exec-summary__body">
+            <p><strong>AI is not disrupting industries the way most executive teams think it is</strong>.</p>
+            <p>The comfortable story: deploy some co-pilots, run some pilots, create a use-case task force. That is not wrong. It's just not enough. And in a market where competitors are rethinking their models from the ground up, "not enough" is a dangerous place to be.</p>
+            <p>Laura Stevens, Managing Director at Board of Innovation, argues that AI belongs in the same category as <strong>electricity and the internet</strong>: a <strong>general purpose technology</strong> that doesn't just improve existing processes but <strong>rewires entire industries</strong>. That framing matters, because every general purpose technology in history has done three things: enabled entirely new business models, restructured cost bases, and <strong>redefined what competitive advantage actually means</strong>.</p>
+            <p>In this webinar, Stevens maps three structural disruptions already underway. First, <strong>control is shifting from human buyers to algorithmic intermediaries</strong>, and if you don't feature in the algorithm, you don't exist in the market. Second, barriers to entry are collapsing. <strong>AI-native companies are being built by teams of eight</strong> that would previously have required hundreds. Third, <strong>customers are changing what they'll pay for</strong>. When AI can produce a market analysis in minutes, the era of <strong>billing for effort is over</strong>.</p>
+            <p>The response is not more use cases. It's strategic reinvention: rethinking where value sits, how it's monetised, and what makes your business genuinely hard to replace.</p>
+            <p>This guide is a companion to that conversation. Use it as a briefing document, a provocation for your next board discussion, or a framework for your AI strategy review.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           QUICK TAKE - Card-Based Clusters
+           ============================================ -->
+      <section id="quick-take" class="quick-take">
+        <div class="container">
+          <h2>Quick Take</h2>
+          <p class="quick-take__subtitle">The full webinar distilled into six themes. Start top-left, read across. Each card shows one key point; click to reveal the rest.</p>
+          <div class="qt-controls">
+            <button class="qt-expand-all" id="qt-expand-all" aria-expanded="false">Expand All</button>
+            <span class="qt-reading-hint">&#8592; &#8594; Read left to right, top to bottom</span>
+          </div>
+
+          <div class="qt-flow">
+
+          <div class="qt-act-label">Act 1: The Problem</div>
+          <div class="qt-grid">
+
+            <!-- Cluster 1: The Big Picture -->
+            <div class="qt-card" data-cluster="big-picture" data-order="1">
+              <div class="qt-card__header">
+                <span class="cluster-icon" aria-hidden="true"><lord-icon src="https://cdn.lordicon.com/surcxhka.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon></span>
+                <h3 class="qt-card__title">The Big Picture</h3>
+              </div>
+              <ul class="qt-card__list">
+                <li>Most enterprise AI strategies are a list of use cases. That's operational thinking applied to a structural problem.</li>
+                <li class="qt-card__hidden">AI is a general purpose technology, comparable to electricity or the internet, not a software upgrade.</li>
+                <li class="qt-card__hidden">General purpose technologies always do three things: create new business models, change cost structures, <strong>shift the basis of competitive advantage</strong>.</li>
+                <li class="qt-card__hidden">Treating AI as a toolbox upgrade means optimising a model that may no longer hold.</li>
+              </ul>
+              <button class="qt-card__expand" aria-expanded="false">
+                <span class="qt-card__expand-text">+3 more</span>
+              </button>
+            </div>
+
+            <div class="qt-act-label qt-act-label--inline">Act 2: The Disruption</div>
+            <div class="qt-card" data-cluster="control-shifts" data-order="2">
+              <div class="qt-card__header">
+                <span class="cluster-icon" aria-hidden="true"><lord-icon src="https://cdn.lordicon.com/dxoycpzg.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon></span>
+                <h3 class="qt-card__title">Control Shifts</h3>
+              </div>
+              <ul class="qt-card__list">
+                <li>Three structural disruptions are already underway: control shifts, competition increases, value moves.</li>
+                <li class="qt-card__hidden">Control is shifting from human buyers to the algorithms that mediate decisions.</li>
+                <li class="qt-card__hidden">Customers increasingly start their buying journeys in ChatGPT or Perplexity, not brand websites.</li>
+                <li class="qt-card__hidden">If your brand isn't surfaced by the algorithm, you may not be considered at all.</li>
+                <li class="qt-card__hidden">The next phase: AI doesn't just shape decisions, it executes them. Agentic commerce is already live.</li>
+                <li class="qt-card__hidden">Agent-to-agent commerce is coming. Your AI will negotiate with brand AIs, with no human in the loop.</li>
+              </ul>
+              <button class="qt-card__expand" aria-expanded="false">
+                <span class="qt-card__expand-text">+5 more</span>
+              </button>
+            </div>
+
+            <!-- Cluster 3: Competition Collapse -->
+            <div class="qt-card" data-cluster="competition-collapse" data-order="3">
+              <div class="qt-card__header">
+                <span class="cluster-icon" aria-hidden="true"><lord-icon src="https://cdn.lordicon.com/aklfruoc.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon></span>
+                <h3 class="qt-card__title">Competition Collapse</h3>
+              </div>
+              <ul class="qt-card__list">
+                <li>Suppliers are becoming interchangeable faster. Switching costs drop. Brand loyalty weakens. Performance metrics dominate.</li>
+                <li class="qt-card__hidden">AI is also removing entire market layers, specifically those that only add coordination or production without owning defensible assets.</li>
+                <li class="qt-card__hidden">Not all intermediaries are threatened equally. Booking.com, for example, owns data, APIs, payments and distribution: a defensible position.</li>
+                <li class="qt-card__hidden">AI dramatically lowers barriers to entry. New competitors are being built AI-native, leaner, and at a structurally lower cost base.</li>
+                <li class="qt-card__hidden">A developer built a company of 8 people, reached 250K users, hit $3.5M ARR, and sold for $80M. In six months, with no outside capital.</li>
+                <li class="qt-card__hidden">Basis AI reached a $1B valuation with a fraction of the headcount traditional service firms require.</li>
+              </ul>
+              <button class="qt-card__expand" aria-expanded="false">
+                <span class="qt-card__expand-text">+5 more</span>
+              </button>
+            </div>
+
+            <!-- Cluster 4: Value Migration -->
+            <div class="qt-card" data-cluster="value-migration" data-order="4">
+              <div class="qt-card__header">
+                <span class="cluster-icon" aria-hidden="true"><lord-icon src="https://cdn.lordicon.com/wyqtxzeh.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon></span>
+                <h3 class="qt-card__title">Value Migration</h3>
+              </div>
+              <ul class="qt-card__list">
+                <li>The third disruption: customers are shifting from paying for effort to paying for outcomes.</li>
+                <li class="qt-card__hidden">When AI can generate a market analysis in minutes, the premium on human-delivered reports collapses.</li>
+                <li class="qt-card__hidden">Billing by the hour is becoming structurally indefensible. Junior leverage models in consulting are under pressure.</li>
+                <li class="qt-card__hidden">Asset-based businesses are shifting from selling products to selling outcomes: uptime guarantees, performance contracts, power-by-the-hour.</li>
+                <li class="qt-card__hidden">SaaS is under pressure from both sides: supply (easier to build alternatives) and demand (fewer seats needed when AI amplifies small teams).</li>
+              </ul>
+              <button class="qt-card__expand" aria-expanded="false">
+                <span class="qt-card__expand-text">+4 more</span>
+              </button>
+            </div>
+
+            <div class="qt-act-label qt-act-label--inline">Act 3: The Response</div>
+            <div class="qt-card" data-cluster="exposure-defense" data-order="5">
+              <div class="qt-card__header">
+                <span class="cluster-icon" aria-hidden="true"><lord-icon src="https://cdn.lordicon.com/nkmsrxys.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon></span>
+                <h3 class="qt-card__title">Exposure &amp; Defense</h3>
+              </div>
+              <ul class="qt-card__list">
+                <li>Industries most vulnerable: those where products are comparable, price-dominant, and decisions are high-frequency.</li>
+                <li class="qt-card__hidden">Telecom bundles, energy procurement, cloud usage, insurance: prime candidates for AI-driven commoditisation.</li>
+                <li class="qt-card__hidden">Regulation delays disruption. It doesn't prevent it.</li>
+                <li class="qt-card__hidden">Defensible positions in an AI world: proprietary data, deep workflow integration, differentiated personalised experience.</li>
+                <li class="qt-card__hidden">A Dutch entrepreneur turned down a ~$500M acquisition from OpenAI for his gaming behavior dataset. Proprietary data is a moat.</li>
+              </ul>
+              <button class="qt-card__expand" aria-expanded="false">
+                <span class="qt-card__expand-text">+4 more</span>
+              </button>
+            </div>
+
+            <!-- Cluster 6: The Response -->
+            <div class="qt-card" data-cluster="the-response" data-order="6">
+              <div class="qt-card__header">
+                <span class="cluster-icon" aria-hidden="true"><lord-icon src="https://cdn.lordicon.com/vihyezfv.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon></span>
+                <h3 class="qt-card__title">The Response</h3>
+              </div>
+              <ul class="qt-card__list">
+                <li>An AI strategy is not a use-case list. It must address business model reinvention, workflow redesign, and operating model transformation.</li>
+                <li class="qt-card__hidden">Three transformation tracks: Strategic Reinvention, Workflow Redesign, Operating Model Redesign.</li>
+                <li class="qt-card__hidden">The mindset that makes the difference: willingness to step outside incremental optimisation and question whether the model itself still holds.</li>
+              </ul>
+              <button class="qt-card__expand" aria-expanded="false">
+                <span class="qt-card__expand-text">+2 more</span>
+              </button>
+            </div>
+
+          </div>
+          </div><!-- close qt-flow -->
+        </div>
+      </section>
+
+      <!-- ============================================
+           CHAPTER OVERVIEW
+           ============================================ -->
+      <section id="overview" class="overview">
+        <div class="container">
+          <h2>The Argument in Three Acts</h2>
+          <div class="overview-grid">
+            <a href="#comfortable-illusion" class="overview-card">
+              <div class="overview-card__icon" aria-hidden="true">
+                <lord-icon src="https://cdn.lordicon.com/kkvxgpti.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon>
+              </div>
+              <div class="overview-card__act">Act 1</div>
+              <h3>The Problem</h3>
+              <p class="overview-card__desc">Most companies treat AI as a productivity tool. That's a category error. AI is a general purpose technology, like electricity or the internet, that rewrites business models, cost structures, and competitive advantage. Optimising your existing model is not a strategy.</p>
+            </a>
+            <a href="#control" class="overview-card">
+              <div class="overview-card__icon" aria-hidden="true">
+                <lord-icon src="https://cdn.lordicon.com/qhkvfxpn.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon>
+              </div>
+              <div class="overview-card__act">Act 2</div>
+              <h3>The Disruption</h3>
+              <p class="overview-card__desc">Three forces are already reshaping markets. Algorithms now control the customer journey, not brands. AI-native startups with 8 people outcompete teams of 200. And customers are shifting from paying for effort to paying for outcomes. Billing for hours is ending.</p>
+            </a>
+            <a href="#disruption-index" class="overview-card">
+              <div class="overview-card__icon" aria-hidden="true">
+                <lord-icon src="https://cdn.lordicon.com/lomfljuq.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon>
+              </div>
+              <div class="overview-card__act">Act 3</div>
+              <h3>The Response</h3>
+              <p class="overview-card__desc">Score your vulnerability across 8 dimensions with the AI Disruption Index. Then act on three tracks: <strong>reinvent your business model</strong>, <strong>redesign workflows</strong> around AI capabilities, and <strong>transform your operating model</strong> from pyramid to AI-augmented structure.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           SECTION 1: THE COMFORTABLE ILLUSION
+           ============================================ -->
+      <section id="comfortable-illusion" class="content-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <lord-icon src="https://cdn.lordicon.com/tdrtiskw.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+            </div>
+            <div class="section-number">01</div>
+            <div class="section-label">THE PROBLEM</div>
+            <h2 class="section-title">Most companies are solving yesterday's problem with yesterday's thinking.</h2>
+          </div>
+
+          <div class="content-body">
+            <div class="section-narrative">
+              <p>Walk into any large enterprise today and ask about their AI strategy. You'll likely hear about co-pilot rollouts, productivity pilots, use-case registries, and employee training programmes. These things are real. They produce real results. And they are nowhere near sufficient.</p>
+              <p>Laura Stevens calls this the "<strong>comfortable illusion</strong>": the idea that AI is primarily a tool for making your existing operating model more efficient. The problem isn't that this is wrong. The problem is that it's a category error. <strong>Optimisation is an operational question. AI is a structural one</strong>. Applying operational logic to a structural shift means you're refining a model that may soon stop making sense entirely.</p>
+              <p>The deeper issue is that <strong>a structural shift cannot be addressed with incremental logic</strong>. If competitors are rethinking their business models from scratch, with new cost structures, new value propositions, new ways of entering markets, then being incrementally more efficient inside your current model is a path to being disrupted cleanly. The gap between "we're running pilots" and "we're rebuilding how we compete" is not a gap you close with a task force.</p>
+            </div>
+            <div class="slide-viewer" data-viewer="illusion">
+              <div class="slide-viewer__label">Presentation Slides</div>
+              <div class="slide-viewer__item active">
+                <img src="slides/slide_0002.jpg" alt="The Comfortable Illusion" loading="lazy">
+                <div class="slide-viewer__caption">The Comfortable Illusion</div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"A structural shift can never be addressed with an incremental logic, which is unfortunately what we often see in companies. And so treating AI as a toolbox upgrade really misses that bigger redesign opportunity."</p>
+            <cite>Laura Stevens, Managing Director, Board of Innovation</cite>
+          </div>
+
+          <div class="so-what">
+            <div class="so-what__label">So What?</div>
+            <p>Audit your current AI strategy. If it reads like a project list, it probably is one. The test: does your strategy address where you play, how you win, and what makes you defensible? Or does it address where you can shave cost and speed up processes? Both matter. Only one is strategic. Schedule board time for the structural conversation. It is not happening in a use-case workshop.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           SECTION 2: THE GPT FRAME
+           ============================================ -->
+      <section id="gpt-frame" class="content-section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <lord-icon src="https://cdn.lordicon.com/qhkvfxpn.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+            </div>
+            <div class="section-number">02</div>
+            <div class="section-label">THE REFRAME</div>
+            <h2 class="section-title">Think electricity, not software. The frame changes everything.</h2>
+          </div>
+
+          <div class="section-narrative">
+            <p>The category you put AI into determines the strategy you build. If it's a software category, you buy tools, run projects, and manage change. If it's a general purpose technology, the category that includes <strong>electricity and the internet</strong>, the response looks completely different.</p>
+            <p>General purpose technologies don't improve existing processes. They reshape industries. The internet didn't create faster mail. It created e-commerce, social media business models, and the destruction of entire sectors of the economy. Electricity didn't create better candles. It rewired how manufacturing worked, how cities were built, how labour was organised. Stevens' argument is that AI belongs in this category, and that history gives us a reliable map of what comes next.</p>
+            <p>That map has three consistent features. First, entirely new business models emerge: not better versions of what exists, but fundamentally different ways of creating and capturing value. Second, cost structures change: when tasks that required time and expertise can be automated and delivered at scale, they become dramatically cheaper to produce. Third, the basis of competitive advantage shifts. Capital, size, brand, and reach become less decisive. Proprietary data, process integration, and algorithmic ownership become more so.</p>
+          </div>
+
+          <div class="shifts-grid">
+            <div class="shift-card">
+              <div class="shift-card__icon" aria-hidden="true">
+                <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon>
+              </div>
+              <h3>New Business Models</h3>
+              <p>Not better versions of what exists. Fundamentally different ways of creating and capturing value.</p>
+            </div>
+            <div class="shift-card">
+              <div class="shift-card__icon" aria-hidden="true">
+                <lord-icon src="https://cdn.lordicon.com/fihkmkwt.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon>
+              </div>
+              <h3>New Cost Structures</h3>
+              <p>Tasks requiring time and expertise become dramatically cheaper to produce at scale.</p>
+            </div>
+            <div class="shift-card">
+              <div class="shift-card__icon" aria-hidden="true">
+                <lord-icon src="https://cdn.lordicon.com/yxyampao.json" trigger="in" colors="primary:#4338ca" style="width:24px;height:24px"></lord-icon>
+              </div>
+              <h3>New Competitive Advantage</h3>
+              <p>Proprietary data, process integration, and algorithmic ownership replace capital and brand.</p>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"AI is not just a tool but something that economists call a general purpose technology, which is much more similar to the internet or to electricity. And we know that these technologies did not just improve existing processes; they reshaped entire industries."</p>
+            <cite>Laura Stevens, Managing Director, Board of Innovation</cite>
+          </div>
+
+          <div class="so-what">
+            <div class="so-what__label">So What?</div>
+            <p>Run a thought experiment with your executive team. If AI does to your industry what the internet did to retail, what survives? What disappears? What new model wins? This is not a futurism exercise. It's a strategic stress test. The companies that ran it about digital fifteen years ago and acted on it are now the incumbents. The ones that didn't are mostly gone.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           SECTION 3: CONTROL SHIFTS
+           ============================================ -->
+      <section id="control" class="content-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <lord-icon src="https://cdn.lordicon.com/lbjtvqiv.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+            </div>
+            <div class="section-number">03</div>
+            <div class="section-label">DISRUPTION #1</div>
+            <h2 class="section-title">If you don't control the algorithm, you don't control the customer.</h2>
+          </div>
+
+          <div class="content-body">
+            <div class="section-narrative">
+              <p>Markets have always been built around human buyers: impulsive, brand-influenced, limited in information processing, susceptible to marketing. Every aspect of how businesses are designed to win customers, from pricing to positioning to advertising to brand building, rests on that assumption. AI is dismantling it.</p>
+              <p>Customers increasingly begin their journeys not on brand websites but in ChatGPT, Perplexity, or AI-powered search. They ask "what's the best CRM for a mid-sized company?" or "which laptop is best under a thousand euros?" and the algorithm summarises, compares, filters, and recommends. Humans still make the final call, for now, but the consideration set and how options are framed is shaped entirely by a system that didn't exist five years ago. <strong>If you're not in that set, you're not in the race</strong>.</p>
+              <p>The disruption deepens as AI moves from shaping decisions to executing them. Agentic commerce is already live in the US, with AI assistants completing purchases inside chat interfaces. The trajectory is clear: <strong>autonomous agents that manage the full journey</strong> from discovery to checkout, followed eventually by agent-to-agent commerce where your AI negotiates with brand AIs and completes transactions with no human involvement. At that point, <strong>the interface becomes the decision maker</strong>. Brands are no longer competing for customer attention. They're competing to be selected by a system. That is a fundamentally different game.</p>
+            </div>
+            <div class="slide-viewer" data-viewer="control">
+              <div class="slide-viewer__label">Presentation Slides</div>
+              <div class="slide-viewer__item active">
+                <img src="slides/slide_0004.jpg" alt="Control framework: Shaped, Executed, Removed" loading="lazy">
+                <div class="slide-viewer__caption">Control framework: Shaped, Executed, Removed</div>
+              </div>
+              <div class="slide-viewer__item">
+                <img src="slides/slide_0007.jpg" alt="The Agentic Commerce evolution" loading="lazy">
+                <div class="slide-viewer__caption">The Agentic Commerce evolution</div>
+              </div>
+              <div class="slide-viewer__item">
+                <img src="slides/slide_0008.jpg" alt="S-curve: Four phases of adoption" loading="lazy">
+                <div class="slide-viewer__caption">S-curve: Four phases of adoption</div>
+              </div>
+              <div class="slide-viewer__item">
+                <img src="slides/slide_0009.jpg" alt="Implications for sellers" loading="lazy">
+                <div class="slide-viewer__caption">Implications for sellers</div>
+              </div>
+              <div class="slide-viewer__item">
+                <img src="slides/slide_0010.jpg" alt="When commoditisation hits hardest" loading="lazy">
+                <div class="slide-viewer__caption">When commoditisation hits hardest</div>
+              </div>
+              <button class="slide-viewer__prev" aria-label="Previous slide">&lsaquo;</button>
+              <button class="slide-viewer__next" aria-label="Next slide">&rsaquo;</button>
+              <div class="slide-viewer__counter">Slide <span class="slide-viewer__current">1</span> of 5</div>
+            </div>
+          </div>
+
+
+          <div class="pull-quote">
+            <p>"Brands are no longer competing for shelf space; they are competing to be selected by the agent."</p>
+            <cite>Laura Stevens, Managing Director, Board of Innovation</cite>
+          </div>
+
+          <div class="so-what">
+            <div class="so-what__label">So What?</div>
+            <p>Start with a simple question: where does your brand show up when an AI summarises your category? Test it now. Open ChatGPT or Perplexity and ask the question your target customer asks. If you're not appearing, or appearing unfavourably, that is a marketing and positioning problem with a structural cause. Longer term, your go-to-market strategy needs a position on agentic commerce: how will you optimise for selection by AI agents, not just visibility to human eyes?</p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- ============================================
+           SECTION 4: COMPETITION
+           ============================================ -->
+      <section id="competition" class="content-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <lord-icon src="https://cdn.lordicon.com/aklfruoc.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+            </div>
+            <div class="section-number">04</div>
+            <div class="section-label">DISRUPTION #2</div>
+            <h2 class="section-title">The most dangerous competitor you'll face probably has a team of eight.</h2>
+          </div>
+
+          <div class="content-body">
+            <div class="section-narrative">
+              <p>The conventional understanding of competitive moats relies on scale: large teams, significant capital, deep expertise, long product development cycles. These things took years to accumulate and were genuinely hard to replicate. AI is compressing that accumulation dramatically. What once required 50 engineers, months of development, and millions in capital can now be built by a small team in weeks.</p>
+              <p>This is not a prediction. It's already happening. Stevens points to B44: built by a developer as a side project using AI-assisted "<strong>vibe coding</strong>." In six months, with no outside funding, the company reached <strong>250,000 users</strong>, hit <strong>$3.5 million in annual recurring revenue</strong>, and <strong>sold for $80 million</strong>. The team? <strong>Fewer than ten people</strong>. That exit, that speed, that scale, would have required a venture-backed team of hundreds in any prior era. Basis AI tells a similar story: a company that reached a <strong>$1 billion valuation</strong> with a fraction of the headcount a traditional services business would require, built on autonomous agents that handle end-to-end accounting tasks.</p>
+              <p>The structural implication is not just that new entrants are more dangerous. It's that the cost of building alternatives to your product is falling continuously. That affects both the supply side (more competitors enter) and the demand side (customers become less willing to pay premium prices when they know alternatives are cheap to build). Coordination costs are collapsing. Production is becoming software-defined. The competitive landscape will keep compressing. The question is whether your strategy accounts for it.</p>
+            </div>
+            <div class="slide-card">
+              <img src="slides/slide_0012.jpg" alt="New competitors framework: three forces collapsing barriers to entry" loading="lazy">
+              <div class="slide-card__caption">New competitors: three forces collapsing barriers</div>
+            </div>
+          </div>
+
+          <div class="case-studies">
+            <p class="case-studies__intro">Stevens highlights two companies that illustrate the new competitive reality. Both were built by tiny teams, powered by AI, and reached valuations that would have required hundreds of people in any prior era.</p>
+            <div class="case-study-card">
+              <h3>B44</h3>
+              <p class="case-study-card__desc">A side project built with AI-assisted "<strong>vibe coding</strong>." No VC, no large team. Reached <strong>250,000 users</strong> in six months and sold for $80M.</p>
+              <div class="data-point">
+                <span class="data-point__label">Exit</span>
+                <span class="data-point__value" data-count-to="80" data-count-prefix="$" data-count-suffix="M">$80M</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">Team</span>
+                <span class="data-point__value" data-count-to="8" data-count-suffix=" people">8 people</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">Timeline</span>
+                <span class="data-point__value" data-count-to="6" data-count-suffix=" months">6 months</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">ARR</span>
+                <span class="data-point__value" data-count-to="3.5" data-count-prefix="$" data-count-suffix="M">$3.5M</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">Capital</span>
+                <span class="data-point__value">No outside funding</span>
+              </div>
+            </div>
+            <div class="case-study-card">
+              <h3>Basis AI</h3>
+              <p class="case-study-card__desc">An AI-first accounting firm using autonomous agents for end-to-end tasks. Reached $1B valuation with a fraction of traditional headcount.</p>
+              <div class="data-point">
+                <span class="data-point__label">Valuation</span>
+                <span class="data-point__value" data-count-to="1" data-count-prefix="$" data-count-suffix="B">$1B</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">Team</span>
+                <span class="data-point__value">Lean team</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">Model</span>
+                <span class="data-point__value">AI-first accounting</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">Approach</span>
+                <span class="data-point__value">Autonomous agents</span>
+              </div>
+              <div class="data-point">
+                <span class="data-point__label">Revenue/FTE</span>
+                <span class="data-point__value">Dramatically higher</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"When the cost of building drops, barriers to entry fall and competition increases."</p>
+            <cite>Laura Stevens, Managing Director, Board of Innovation</cite>
+          </div>
+
+          <div class="so-what">
+            <div class="so-what__label">So What?</div>
+            <p>Map your barriers to entry honestly. Which of your moats depend on capital, headcount, or expertise that AI is now commoditising? Which depend on proprietary data, workflow integration, or accumulated customer relationships? The first category is shrinking. The second is where real defensibility lives. If your competitive advantage is primarily in the first category, that is the redesign conversation to have, now, before an AI-native competitor makes it for you.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- ============================================
+           SECTION 5: VALUE
+           ============================================ -->
+      <section id="value" class="content-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <lord-icon src="https://cdn.lordicon.com/wyqtxzeh.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+            </div>
+            <div class="section-number">05</div>
+            <div class="section-label">DISRUPTION #3</div>
+            <h2 class="section-title">When AI can write the report in minutes, no one is paying five thousand euros for it.</h2>
+          </div>
+
+          <div class="content-body">
+            <div class="section-narrative">
+              <p>Most business models are built on a simple premise: revenue scales with effort. You charge by the hour, by the seat, by the deliverable, by the project. The customer is paying for human time and expertise, and the revenue model is directly tied to how much of that time you can sell. AI doesn't just make that time cheaper to produce. It breaks the logic that made time valuable in the first place.</p>
+              <p>Stevens frames this starkly: if AI can generate a market analysis in minutes, why would a client pay five thousand euros for one? If a coaching report can be produced in seconds, what exactly is the premium attached to? The answer, increasingly, is nothing, unless you've built something more defensible than the output itself. This pressure shows up everywhere. In professional services, it hits the junior leverage model hardest: AI is automating exactly the repetitive cognitive tasks that junior analysts and associates were hired to do, compressing billable hours and shrinking the traditional pyramid. In SaaS, it hits seat-based pricing: if AI lets three people do the work of twenty, you're selling eighteen fewer seats.</p>
+              <p>The response is not to defend the old model. It's to understand what customers are actually willing to pay for as effort becomes cheap. The answer, consistently, is outcomes. Performance. Reliability. Continuous value. Stevens maps this across two categories: service businesses moving to productised, subscription-based models where the value is in the outcome delivered, not the hours billed; and asset-based businesses moving from product sales to performance contracts. Rolls-Royce doesn't sell jet engines. It sells hours of thrust. That logic is now spreading across manufacturing, construction, pharma, and agriculture.</p>
+            </div>
+            <div class="slide-card">
+              <img src="slides/slide_0014.jpg" alt="Human-time monetisation erodes: direct replacement and human-time erosion across professional services" loading="lazy">
+              <div class="slide-card__caption">Human-time monetisation erodes</div>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"When the cost of producing knowledge drops, the willingness to pay for that production drops as well. Customers shift from paying for effort to wanting to pay for outcomes or real impact."</p>
+            <cite>Laura Stevens, Managing Director, Board of Innovation</cite>
+          </div>
+
+          <div class="so-what">
+            <div class="so-what__label">So What?</div>
+            <p>Examine your revenue model against one question: what are you actually charging for, effort or outcomes? If effort, which parts of that effort can AI now replicate at near-zero marginal cost? That is where your pricing model is exposed. The next question is harder: what does your customer actually value, separate from the labour required to produce it? That answer shapes your redesign. Outcome-based pricing, subscription models, performance contracts: none are new concepts. What's new is the urgency of the transition.</p>
+          </div>
+        </div>
+      </section>
+
+<!-- ============================================
+           SECTION 6: DISRUPTION INDEX
+           ============================================ -->
+      <section id="disruption-index" class="content-section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <lord-icon src="https://cdn.lordicon.com/vihyezfv.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+            </div>
+            <div class="section-number">06</div>
+            <div class="section-label">ASSESS YOUR RISK</div>
+            <h2 class="section-title">Is your business model at risk?</h2>
+          </div>
+
+          <div class="content-body">
+            <div class="section-narrative">
+              <p>BOI's AI Disruption Exposure Index provides a structured way to assess vulnerability across eight dimensions. Each factor represents a distinct surface where AI-driven disruption can impact your business. The framework is designed for <strong>honest self-assessment, not comfort</strong>.</p>
+            </div>
+            <div class="slide-viewer" data-viewer="disruption">
+              <div class="slide-viewer__label">Presentation Slides</div>
+              <div class="slide-viewer__item active">
+                <img src="slides/slide_0016.jpg" alt="BOI's 8-factor AI Disruption Exposure Index" loading="lazy">
+                <div class="slide-viewer__caption">BOI's 8-factor AI Disruption Exposure Index</div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="disruption-grid">
+            <div class="index-card">
+              <div class="index-card__num">01</div>
+              <h3>Operational Exposure</h3>
+              <p>How template-driven, repetitive, and information-handling-heavy is the work?</p>
+            </div>
+            <div class="index-card">
+              <div class="index-card__num">02</div>
+              <h3>Business Model Vulnerability</h3>
+              <p>How tied is revenue to human time and scarce expertise?</p>
+            </div>
+            <div class="index-card">
+              <div class="index-card__num">03</div>
+              <h3>Distribution Disintermediation</h3>
+              <p>Is your offering comparable, price-driven, and low-risk for AI-mediated switching?</p>
+            </div>
+            <div class="index-card">
+              <div class="index-card__num">04</div>
+              <h3>AI Capability Maturity</h3>
+              <p>How well can current AI perform core industry tasks right now?</p>
+            </div>
+            <div class="index-card">
+              <div class="index-card__num">05</div>
+              <h3>AI-Native Entry Barriers</h3>
+              <p>How easy is it for a lean AI-native competitor to enter your market?</p>
+            </div>
+            <div class="index-card">
+              <div class="index-card__num">06</div>
+              <h3>Differentiation Erosion</h3>
+              <p>Can your differentiation survive AI replication?</p>
+            </div>
+            <div class="index-card">
+              <div class="index-card__num">07</div>
+              <h3>Customer Acceptance</h3>
+              <p>How comfortable are customers with AI replacing humans in your domain?</p>
+            </div>
+            <div class="index-card">
+              <div class="index-card__num">08</div>
+              <h3>Regulatory Friction</h3>
+              <p>Does regulation slow disruption? Note: this is a delay mechanism, never a permanent shield.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- ============================================
+           SECTION 7: HOW TO RESPOND
+           ============================================ -->
+      <section id="how-to-respond" class="content-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-icon" aria-hidden="true">
+              <lord-icon src="https://cdn.lordicon.com/nkmsrxys.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+            </div>
+            <div class="section-number">07</div>
+            <div class="section-label">THE RESPONSE</div>
+            <h2 class="section-title">This is <strong>not a use-case problem</strong>. Stop solving it like one.</h2>
+          </div>
+
+          <div class="content-body">
+            <div class="section-narrative">
+              <p>Stevens is direct about the failure mode she sees most often: companies respond to structural disruption with operational tools. They build use-case lists. They deploy co-pilots. They run pilots. None of this is wrong, but all of it is insufficient when the disruption is structural. The question is not which processes to automate. It's whether the model those processes serve still holds.</p>
+              <p>The Board of Innovation framework organises the response into three tracks. Strategic reinvention is the first and most important: where do you play, how do you win, what makes you genuinely hard to replace when AI can replicate so much? This means understanding where your business model is most exposed, where real scarcity sits, and how you monetise in a world where performance drives value more than production does. The second track, workflow redesign, is about structural economics: which workflows are high-volume, labour-intensive, and repeatable enough that an AI-first redesign materially changes your cost base? Not incremental efficiency; structural redesign of delivery. The third track, operating model redesign, addresses the organisational consequence: as delivery changes, so must structure, governance, roles, capabilities, and culture.</p>
+              <p>Defensible positions in an AI-driven market, Stevens argues, tend to cluster around three things: proprietary data that others cannot replicate, deep integration into customer workflows that raises switching costs, and differentiated personalised experiences that make comparability harder. The Dutch entrepreneur who turned down a roughly $500 million offer from OpenAI for his gaming behaviour dataset understood this instinctively. Data is a moat. Integration is a moat. Unique experience is a moat. Generic output, no matter how well-produced, is not.</p>
+            </div>
+            <div class="slide-viewer" data-viewer="respond">
+              <div class="slide-viewer__label">Presentation Slides</div>
+              <div class="slide-viewer__item active">
+                <img src="slides/slide_0018.jpg" alt="BOI's Three Tracks of AI-First Transformation" loading="lazy">
+                <div class="slide-viewer__caption">BOI's Three Tracks of AI-First Transformation</div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="tracks-grid">
+            <div class="track-card">
+              <div class="track-card__num">1</div>
+              <h3>Strategic Reinvention</h3>
+              <p>Redefine where value sits. Where is your model vulnerable? What makes you hard to replace? How do you monetise in an outcomes-driven world?</p>
+            </div>
+            <div class="track-card">
+              <div class="track-card__num">2</div>
+              <h3>Workflow Redesign</h3>
+              <p>Rebuild how value is delivered. Which workflows are repeatable, high-volume, labour-intensive? What can be structurally redesigned?</p>
+            </div>
+            <div class="track-card">
+              <div class="track-card__num">3</div>
+              <h3>Operating Model Redesign</h3>
+              <p>Rewire how the organisation operates. Governance, roles, culture, skills, capabilities: all must evolve.</p>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>"If your AI strategy today is a list of use cases, if it's only about co-pilots or shallow tools or use case implementation, then you're most likely trying to optimize a business and an operating model that will no longer hold in the future."</p>
+            <cite>Laura Stevens, Managing Director, Board of Innovation</cite>
+          </div>
+
+          <div class="pull-quote">
+            <p>"AI is not a technology shift. It is a market shift. And market shifts don't reward optimization; they reward reinvention."</p>
+            <cite>Laura Stevens, Managing Director, Board of Innovation</cite>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- ============================================
+           Q&A SECTION
+           ============================================ -->
+      <section id="qa" class="qa-section">
+        <div class="container">
+          <div class="section-icon" aria-hidden="true" style="margin: 0 auto 16px;">
+            <lord-icon src="https://cdn.lordicon.com/fdxqrdfe.json" trigger="in" delay="200" colors="primary:var(--lord-icon-color,#4f46e5)" style="width:32px;height:32px"></lord-icon>
+          </div>
+          <h2>Q&amp;A Highlights</h2>
+
+          <div class="qa-item">
+            <div class="qa-item__question">"What does this mean for professional services and digital agencies?"</div>
+            <div class="qa-item__answer">BOI itself is applying its own frameworks internally. "We're eating our own breakfast," Stevens notes. The firm is actively transforming its delivery model, building more senior teams, and applying the same transformation principles it advises clients on. The implication for agencies: the traditional pyramid model, where junior staff execute repetitive tasks at volume, is under direct pressure.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-item__question">"What happens to junior talent pipelines?"</div>
+            <div class="qa-item__answer">Entry-level positions are exactly where AI is taking over. The implication is a shift toward more senior teams and a rethinking of how junior talent is developed. The traditional apprenticeship model, where juniors learn by doing repetitive work, needs to evolve when that repetitive work is increasingly automated.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-item__question">"What makes a company valuable when labour is no longer scarce?"</div>
+            <div class="qa-item__answer">Three things: proprietary data that others cannot replicate, deep workflow integration with customers that raises switching costs, and relationships. Though Stevens notes she is not fully convinced that relationships alone will stand the test of time.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-item__question">"Which sectors feel the most urgency?"</div>
+            <div class="qa-item__answer">The biggest burning platform is in data-heavy industries. The most successful companies are those willing to step outside incremental thinking entirely. Sectors where products are comparable, price-driven, and decisions are high-frequency are the most immediately exposed.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-item__question">"Is the risk from new entrants, or from existing competitors adopting AI-first?"</div>
+            <div class="qa-item__answer">Both, but don't underestimate the latter. "The risk is not just new entrants. It's your existing competitors waking up early and taking an AI-first approach." Some companies are already proactive and moving forward, while others have boards that remain sceptical. The real danger is failing to take that leap while competitors are actively preparing for a broader transformation.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           CLOSING / CTA
+           ============================================ -->
+      <section id="closing" class="closing">
+        <div class="container">
+          <h2>The window is open. It won't stay that way.</h2>
+          <div class="closing__body">
+            <p>The companies winning in AI-disrupted markets right now are not necessarily the biggest or the best-resourced. They're the ones that got honest about their exposure early, and started redesigning before disruption forced their hand.</p>
+            <p>Laura Stevens and the Board of Innovation team work with organisations ready to have that conversation at a structural level. Not use-case lists. Not pilot programmes. Business model reinvention, workflow redesign, and operating model transformation: the three tracks that determine whether your AI strategy actually holds.</p>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="https://www.youtube.com/watch?v=roEXHMC6onQ" class="cta-button cta-button--primary" target="_blank" rel="noopener noreferrer">Watch the Full Webinar</a>
+            <a href="https://www.boardofinnovation.com/how-to-become-ai-first/" class="cta-button cta-button--secondary" target="_blank" rel="noopener noreferrer">Explore BOI's AI-First Playbook</a>
+            <a href="https://www.boardofinnovation.com" class="cta-button cta-button--secondary" target="_blank" rel="noopener noreferrer">Visit Board of Innovation</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================
+           FOOTER
+           ============================================ -->
+      <footer class="footer">
+        <div class="container">
+          <p class="footer__disclaimer">Names and quotes may contain minor inaccuracies due to auto-generated transcript</p>
+          <div class="footer__links">
+            <a href="https://github.com/tapfumamv/boi-ai-disruption-webinar" target="_blank" rel="noopener">Let's connect</a>
+            <span class="footer__sep">&middot;</span>
+            <a href="https://www.youtube.com/watch?v=JMf1ELSrqGo" target="_blank" rel="noopener">Source</a>
+          </div>
+          <p class="footer__license">Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- ============================================
+       LIGHTBOX / SLIDE VIEWER
+       ============================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Slide viewer">
+    <button class="lightbox__close" aria-label="Close slide viewer">&times;</button>
+    <div class="lightbox__content">
+      <img class="lightbox__img" src="" alt="">
+      <p class="lightbox__caption"></p>
+    </div>
+    <button class="lightbox__prev" aria-label="Previous slide">&#8249;</button>
+    <button class="lightbox__next" aria-label="Next slide">&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
