@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{REPORT_TITLE}} - {{PROJECT_NAME}}</title>
+<style>
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --surface2: #242424;
+  --text: #e8e8e8;
+  --text2: #a0a0a0;
+  --accent: #6C63FF;
+  --border: #333;
+  --green: #4ECDC4;
+  --yellow: #FFE66D;
+  --red: #FF6B6B;
+  --blue: #6C63FF;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+.container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+.back-link { color: var(--accent); text-decoration: none; font-size: 0.85rem; display: inline-block; margin-bottom: 1rem; }
+header h1 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; }
+.header-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+.header-meta span {
+  font-size: 0.8rem;
+  color: var(--text2);
+  background: var(--surface2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+}
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+}
+.badge-planning { background: rgba(108,99,255,0.15); color: var(--blue); }
+.badge-report { background: rgba(78,205,196,0.15); color: var(--green); }
+.badge-demo { background: rgba(255,230,109,0.15); color: #c9a800; }
+.badge-audit { background: rgba(255,107,107,0.15); color: var(--red); }
+
+/* Summary stats row */
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.summary-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+.summary-stat .num { font-size: 1.8rem; font-weight: 800; }
+.summary-stat .label { font-size: 0.7rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* Content sections */
+h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--accent); }
+p { margin-bottom: 1rem; }
+ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+li { margin-bottom: 0.3rem; }
+code {
+  background: var(--surface2);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+pre {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Task/story table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+th {
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text2);
+  padding: 0.6rem;
+  border-bottom: 2px solid var(--border);
+}
+td {
+  padding: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+tr:hover { background: var(--surface); }
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text2);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <a href="index.html" class="back-link">&larr; All Reports</a>
+  <h1>{{REPORT_TITLE}}</h1>
+  <div class="header-meta">
+    <span class="badge badge-report">{{TYPE}}</span>
+    <span>{{DATE}}</span>
+    <span>{{SCOPE}}</span>
+    <span class="status-complete">{{STATUS}}</span>
+  </div>
+</header>
+
+<!-- REQUIRED: Summary stats -->
+<div class="summary-stats">
+  <div class="summary-stat">
+    <div class="num">0</div>
+    <div class="label">Stories / Tasks</div>
+  </div>
+  <div class="summary-stat">
+    <div class="num">0</div>
+    <div class="label">Story Points</div>
+  </div>
+  <div class="summary-stat">
+    <div class="num">0</div>
+    <div class="label">Tests</div>
+  </div>
+  <div class="summary-stat">
+    <div class="num">0</div>
+    <div class="label">Days</div>
+  </div>
+</div>
+
+<!-- REQUIRED: Overview -->
+<h2>Overview</h2>
+<p>What this sprint/phase covers and why.</p>
+
+<!-- REQUIRED: Deliverables / Stories -->
+<h2>Deliverables</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Effort</th>
+      <th>Status</th>
+      <th>Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- One row per story/task -->
+  </tbody>
+</table>
+
+<!-- REQUIRED: Key Decisions -->
+<h2>Key Decisions</h2>
+<ul>
+  <li>Decision and rationale</li>
+</ul>
+
+<!-- OPTIONAL: Architecture / Technical Notes -->
+<h2>Technical Notes</h2>
+<p>Architecture decisions, patterns used, technical debt.</p>
+
+<!-- REQUIRED: Outcomes / Results -->
+<h2>Outcomes</h2>
+<p>What was achieved. Test results, performance, quality.</p>
+
+<!-- OPTIONAL: Open Issues / Risks -->
+<h2>Open Issues</h2>
+<ul>
+  <li>Issue and mitigation</li>
+</ul>
+
+<footer>
+  <p>{{PROJECT_NAME}} - {{REPORT_TITLE}} - {{DATE}}</p>
+</footer>
+
+</div>
+</body>
+</html>
