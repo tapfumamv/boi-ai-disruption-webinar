@@ -1843,22 +1843,24 @@ strong {
 }
 
 .footer__links {
-  margin-bottom: 8px;
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
 .footer__links a {
   font-size: 13px;
   color: var(--accent);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .footer__links a:hover {
   text-decoration: underline;
-}
-
-.footer__sep {
-  margin: 0 8px;
-  color: var(--text-muted);
 }
 
 .footer__license {
