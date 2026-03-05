@@ -741,20 +741,67 @@
   });
 
   // ==========================================
-  // Lordicon: play on load, loop on hover
+  // Lordicon: play after scroll stops, replay on re-enter, loop on hover
   // ==========================================
-  document.querySelectorAll('lord-icon').forEach(function(icon) {
-    icon.addEventListener('mouseenter', function() {
-      icon.setAttribute('trigger', 'loop');
-    });
-    icon.addEventListener('mouseleave', function() {
+  (function() {
+    var scrollTimer = null;
+    var pendingIcons = new Set();
+
+    // Observer triggers when icons enter/leave viewport
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        var icon = entry.target;
+        if (entry.isIntersecting) {
+          // Mark as pending, will play when scroll stops
+          icon.removeAttribute('trigger');
+          pendingIcons.add(icon);
+          schedulePlay();
+        } else {
+          // Left viewport, reset so it replays on return
+          pendingIcons.delete(icon);
+          icon.removeAttribute('trigger');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    function schedulePlay() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(function() {
+        pendingIcons.forEach(function(icon) {
+          icon.removeAttribute('trigger');
+          requestAnimationFrame(function() {
+            icon.setAttribute('trigger', 'in');
+          });
+        });
+        pendingIcons.clear();
+      }, 800);
+    }
+
+    // Re-schedule on scroll so icons wait for scroll to stop
+    window.addEventListener('scroll', function() {
+      if (pendingIcons.size > 0) {
+        schedulePlay();
+      }
+    }, { passive: true });
+
+    document.querySelectorAll('lord-icon').forEach(function(icon) {
+      // Remove initial trigger so observer controls it
       icon.removeAttribute('trigger');
-      // Force re-init so next mouseenter starts fresh
-      requestAnimationFrame(function() {
-        icon.setAttribute('trigger', 'in');
+      observer.observe(icon);
+
+      // Hover: loop while hovering
+      icon.addEventListener('mouseenter', function() {
+        pendingIcons.delete(icon);
+        icon.setAttribute('trigger', 'loop');
+      });
+      icon.addEventListener('mouseleave', function() {
+        icon.removeAttribute('trigger');
+        requestAnimationFrame(function() {
+          icon.setAttribute('trigger', 'in');
+        });
       });
     });
-  });
+  })();
 
   // ==========================================
   // Slide Viewer navigation
