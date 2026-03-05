@@ -748,7 +748,11 @@
       icon.setAttribute('trigger', 'loop');
     });
     icon.addEventListener('mouseleave', function() {
-      icon.setAttribute('trigger', 'in');
+      icon.removeAttribute('trigger');
+      // Force re-init so next mouseenter starts fresh
+      requestAnimationFrame(function() {
+        icon.setAttribute('trigger', 'in');
+      });
     });
   });
 
