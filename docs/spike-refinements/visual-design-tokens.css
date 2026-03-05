@@ -1,0 +1,572 @@
+/* ============================================================
+   BOI Companion Site - Visual Design Tokens
+   "How AI is Disrupting Business Models"
+
+   DESIGN PHILOSOPHY
+   -----------------
+   Premium editorial aesthetic: HBR meets Stripe meets Linear.
+   Light mode is the default. Clean, confident, readable.
+
+   Key decisions:
+   1. ACCENT: Deep indigo (#4338ca) replaces teal. Indigo reads as
+      intellectual, editorial, and premium without feeling startup-SaaS.
+      It pairs beautifully with warm greys and Playfair Display serif.
+   2. BACKGROUNDS: Warm whites and subtle stone greys instead of
+      cool/clinical whites. Creates a tactile, paper-like quality
+      that suits long-form editorial content.
+   3. TEXT: Near-black headings (#111827) for authority. Warm grey
+      body text (#4b5563) for comfortable extended reading.
+   4. DARK MODE: Deep navy-blacks (#0c0c14) with a slight blue
+      undertone, not pure black. The indigo accent glows naturally
+      against these backgrounds.
+   5. TYPOGRAPHY: Slightly larger body text (16px vs 15px), tighter
+      heading tracking, and refined line-heights for editorial feel.
+
+   ============================================================ */
+
+/* ============================================================
+   LIGHT MODE (DEFAULT)
+
+   The default experience. Clean whites, warm stone greys,
+   deep indigo accent. Think: a beautifully typeset business
+   journal, not a dashboard.
+   ============================================================ */
+:root {
+  /* ---- Backgrounds ---- */
+  /* Pure white primary surface, warm stone for alternating sections */
+  --bg: #ffffff;
+  --bg-card: #ffffff;
+  --bg-section-alt: #f9f8f6;          /* Warm stone-white, not clinical grey */
+  --bg-code: rgba(0, 0, 0, 0.03);
+  --bg-elevated: #ffffff;
+
+  /* ---- Text Hierarchy ---- */
+  /* Near-black headings for authority; warm grey body for readability */
+  --text-heading: #111827;             /* Confident, near-black */
+  --text-primary: #1f2937;             /* Strong body emphasis */
+  --text-body: #4b5563;                /* Primary reading text: warm grey */
+  --text-muted: #9ca3af;               /* Secondary info, captions */
+  --text-faint: rgba(0, 0, 0, 0.15);  /* Decorative elements, watermarks */
+
+  /* ---- Accent: Deep Indigo ---- */
+  /* Indigo conveys depth, intellect, and editorial sophistication.
+     Unlike teal, it doesn't read as "tech startup." It pairs with
+     Playfair Display serif headings the way a publisher's mark does. */
+  --accent: #4338ca;                   /* Primary indigo */
+  --accent-hover: #3730a3;             /* Deeper on hover */
+  --accent-bg: rgba(67, 56, 202, 0.04);      /* Ultra-subtle tint */
+  --accent-bg-strong: rgba(67, 56, 202, 0.08); /* Visible tint */
+  --accent-border: rgba(67, 56, 202, 0.15);  /* Soft accent borders */
+  --accent-glow: rgba(67, 56, 202, 0.2);     /* Focus rings, active states */
+
+  /* ---- Borders ---- */
+  /* Subtle, warm-toned borders. Not harsh lines. */
+  --border: rgba(0, 0, 0, 0.06);
+  --border-hover: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.18);
+
+  /* ---- Top Bar ---- */
+  --topbar-bg: rgba(255, 255, 255, 0.85);
+  --topbar-border: rgba(0, 0, 0, 0.06);
+
+  /* ---- Shadows ---- */
+  /* Light mode shadows should be subtle and warm, not harsh.
+     Using slightly warm-tinted blacks for natural shadow color. */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.06), 0 3px 10px rgba(0, 0, 0, 0.04);
+
+  /* ---- Overlay ---- */
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+
+  /* ---- Typography ---- */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* ---- Spacing ---- */
+  --section-padding: 120px 0;          /* More generous than 100px for editorial breathing room */
+  --topbar-height: 56px;
+
+  /* ---- Border Radii ---- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+
+/* ============================================================
+   DARK MODE
+
+   Activated via [data-theme="dark"]. Deep navy-blacks with a
+   slight blue undertone. The indigo accent glows against these
+   surfaces. Rich and cinematic, but still readable.
+   ============================================================ */
+[data-theme="dark"] {
+  /* ---- Backgrounds ---- */
+  /* Blue-tinted darks, not pure black. Creates depth and warmth. */
+  --bg: #0c0c14;                       /* Deep navy-black */
+  --bg-card: #13131e;                  /* Slightly elevated surface */
+  --bg-section-alt: #0f0f1a;           /* Subtle alternation */
+  --bg-code: rgba(255, 255, 255, 0.04);
+  --bg-elevated: #1a1a28;              /* Layered UI surfaces */
+
+  /* ---- Text Hierarchy ---- */
+  --text-heading: #f1f1f4;             /* Warm white, not pure #fff */
+  --text-primary: #e2e2e8;
+  --text-body: rgba(255, 255, 255, 0.72);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-faint: rgba(255, 255, 255, 0.18);
+
+  /* ---- Accent: Lighter Indigo for Dark Backgrounds ---- */
+  /* Indigo needs to lighten slightly on dark backgrounds for contrast.
+     We shift toward a more luminous violet-indigo. */
+  --accent: #818cf8;                   /* Lighter indigo for readability */
+  --accent-hover: #a5b4fc;             /* Even lighter on hover */
+  --accent-bg: rgba(129, 140, 248, 0.06);
+  --accent-bg-strong: rgba(129, 140, 248, 0.12);
+  --accent-border: rgba(129, 140, 248, 0.18);
+  --accent-glow: rgba(129, 140, 248, 0.35);
+
+  /* ---- Borders ---- */
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.2);
+
+  /* ---- Top Bar ---- */
+  --topbar-bg: rgba(12, 12, 20, 0.85);
+  --topbar-border: rgba(255, 255, 255, 0.06);
+
+  /* ---- Shadows ---- */
+  /* Dark mode shadows are deeper, more atmospheric. */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 3px 10px rgba(0, 0, 0, 0.3);
+
+  /* ---- Overlay ---- */
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+}
+
+
+/* ============================================================
+   TYPOGRAPHY SYSTEM
+
+   Inter for body: optimized for screens, excellent at small sizes.
+   Playfair Display for headings: editorial authority, classic serif.
+
+   Changes from previous system:
+   - Body bumped to 16px (from 15px) for better readability
+   - Tighter heading letter-spacing for editorial density
+   - Refined line-heights: 1.65 for body (sweet spot for Inter)
+   - Larger clamp ranges for headings to be more impactful
+   ============================================================ */
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;                     /* Up from 15px */
+  line-height: 1.65;                   /* Slightly tighter than 1.7; Inter reads well here */
+  color: var(--text-body);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Heading Scale ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  line-height: 1.15;                   /* Tighter than 1.2 for editorial impact */
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);  /* Slightly larger range */
+  letter-spacing: -0.025em;            /* Tighter tracking for large sizes */
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem); /* More presence */
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  letter-spacing: -0.015em;
+}
+
+h4 {
+  font-family: var(--font-body);       /* Inter for h4 - keeps it distinct */
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ---- Body Text ---- */
+p {
+  margin-bottom: 1.3em;               /* Slightly more generous paragraph spacing */
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Labels & Overlines ---- */
+/* Small caps labels used for section markers, categories, etc. */
+.label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;              /* Slightly less than 3px: more modern */
+  color: var(--accent);
+}
+
+/* ---- Inline Highlights ---- */
+.highlight {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ---- Section Narrative (long-form reading) ---- */
+.section-narrative p {
+  font-size: 16px;
+  line-height: 1.75;                  /* Slightly more generous for long-form */
+}
+
+/* ---- Executive Summary (slightly larger body) ---- */
+.exec-summary__body {
+  font-size: 17px;                    /* Premium feel for summary content */
+  line-height: 1.8;
+}
+
+
+/* ============================================================
+   SECTION SPACING
+
+   More generous padding for a magazine-like reading experience.
+   The wider section padding creates "breathing room" that
+   signals premium content. Scales down gracefully on mobile.
+   ============================================================ */
+
+/* Default section padding is set in :root as 120px 0 */
+
+/* ---- Content containers ---- */
+/* Wider max-width for content: 740px instead of 720px.
+   Slightly wider reading column improves line lengths at 16px body size. */
+.content-section .container,
+.exec-summary .container,
+.quick-take .container,
+.qa-section .container {
+  max-width: 740px;
+}
+
+/* ---- Main content area ---- */
+.main-content {
+  max-width: 820px;                   /* Up from 800px */
+}
+
+/* ---- Section headers ---- */
+.section-header {
+  margin-bottom: 56px;               /* More space before content */
+}
+
+/* ---- Section numbers (decorative) ---- */
+.section-number {
+  font-family: var(--font-body);
+  font-size: 72px;                    /* Larger decorative number */
+  font-weight: 200;
+  color: var(--text-faint);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* ---- Section label (overline) ---- */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+
+/* ============================================================
+   PULL QUOTES
+
+   Border-left style with accent color. The Playfair Display
+   italic gives these an editorial authority. Decorative opening
+   quote mark adds visual interest.
+   ============================================================ */
+
+.pull-quote {
+  margin: 56px 0;                     /* More breathing room */
+  padding: 36px 0 36px 28px;
+  border-left: 3px solid var(--accent);
+  position: relative;
+}
+
+.pull-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.55;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.pull-quote cite {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+/* Decorative opening quote mark */
+.pull-quote::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  color: var(--accent);
+  position: absolute;
+  top: 16px;
+  left: -4px;
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.pull-quote p {
+  padding-left: 32px;
+}
+
+
+/* ============================================================
+   FULL-BLEED QUOTES
+
+   These are the dramatic, full-width quote dividers between
+   major sections. They need to work in both light and dark modes
+   and carry real visual weight.
+
+   LIGHT MODE: Subtle indigo-tinted gradient. Text is dark.
+   DARK MODE: Deep navy gradient. Text is white.
+   ============================================================ */
+
+/* ---- Light Mode (default) ---- */
+.full-bleed-quote {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 120px 40px;                /* More generous vertical padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Subtle warm gradient with a hint of indigo.
+     Not a loud gradient; just enough to set the quote apart. */
+  background: linear-gradient(135deg, #f0eef8 0%, #f5f3fa 40%, #eef0f8 100%);
+  overflow: hidden;
+}
+
+.full-bleed-quote::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  z-index: 0;
+}
+
+.full-bleed-quote blockquote {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.full-bleed-quote blockquote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);   /* Slightly larger */
+  line-height: 1.5;
+  color: #1a1a2e;                    /* Deep text on light gradient */
+  margin-bottom: 0;
+}
+
+/* Image-backed full-bleed quotes */
+.full-bleed-quote--img {
+  background-size: cover;
+  background-position: center;
+}
+
+.full-bleed-quote--img::before {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.full-bleed-quote--img blockquote p {
+  color: #111827;
+}
+
+/* ---- Dark Mode Full-Bleed Quotes ---- */
+[data-theme="dark"] .full-bleed-quote {
+  background: linear-gradient(135deg, #12122a 0%, #0c0c14 50%, #0f1428 100%);
+}
+
+[data-theme="dark"] .full-bleed-quote::before {
+  background: inherit;
+}
+
+[data-theme="dark"] .full-bleed-quote blockquote p {
+  color: #f1f1f4;
+}
+
+[data-theme="dark"] .full-bleed-quote--img::before {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] .full-bleed-quote--img blockquote p {
+  color: #f1f1f4;
+}
+
+
+/* ============================================================
+   BUTTON / CTA TOKENS
+
+   The primary CTA uses the indigo accent. On light backgrounds,
+   white text on indigo. On dark backgrounds, the button is
+   the lighter indigo with dark text for contrast.
+   ============================================================ */
+
+.cta-button--primary {
+  background: var(--accent);
+  color: #ffffff;                     /* White text on indigo */
+  border: 1px solid var(--accent);
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.2);
+}
+
+.cta-button--primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(67, 56, 202, 0.3);
+}
+
+[data-theme="dark"] .cta-button--primary {
+  background: var(--accent);
+  color: #0c0c14;                    /* Dark text on light indigo */
+  box-shadow: 0 2px 8px rgba(129, 140, 248, 0.25);
+}
+
+[data-theme="dark"] .cta-button--primary:hover {
+  background: var(--accent-hover);
+  color: #0c0c14;
+  box-shadow: 0 4px 16px rgba(129, 140, 248, 0.35);
+}
+
+
+/* ============================================================
+   RESPONSIVE SPACING OVERRIDES
+
+   Section padding and typography scale down for smaller screens
+   while maintaining editorial proportions.
+   ============================================================ */
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 80px 0;        /* Down from 120px */
+  }
+
+  .section-number {
+    font-size: 52px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .pull-quote {
+    margin: 40px 0;
+    padding: 28px 0 28px 20px;
+  }
+
+  .full-bleed-quote {
+    padding: 80px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 64px 0;        /* Down from 80px */
+    --topbar-height: 48px;
+  }
+
+  .section-number {
+    font-size: 44px;
+  }
+
+  .section-header {
+    margin-bottom: 32px;
+  }
+
+  .full-bleed-quote {
+    padding: 56px 16px;
+  }
+}
+
+
+/* ============================================================
+   ADDITIONAL DESIGN TOKENS
+
+   Supplementary tokens for specific UI components.
+   ============================================================ */
+
+/* ---- Selection Color ---- */
+::selection {
+  background: var(--accent-bg-strong);
+  color: var(--text-heading);
+}
+
+/* ---- Focus Ring ---- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- Nav Active State ---- */
+.nav-item.active {
+  box-shadow: -2px 0 8px var(--accent-glow);
+  border-left: 2px solid var(--accent);
+}
+
+/* ---- Hero Pill (overline badge) ---- */
+.hero__pill {
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.hero__pill:hover {
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* ---- So What Callout ---- */
+.so-what {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+}
+
+.so-what__label {
+  color: var(--accent);
+}
+
+/* ---- Top Bar Title ---- */
+.top-bar__title {
+  color: var(--accent);
+}

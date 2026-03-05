@@ -1,0 +1,288 @@
+/* ============================================
+   LAYOUT SYSTEM OVERHAUL
+   Desktop widescreen improvements for 1440px+
+   ============================================
+
+   Goals:
+   - Widen content area from 720px to ~1060px on desktop
+   - Side-by-side slide + narrative at desktop widths
+   - Wider hero and executive summary
+   - Keep sidebar at 260px, tablet/mobile unchanged
+
+   HTML changes required: see layout-changes.md
+   ============================================ */
+
+/* ============================================
+   1. MAIN CONTENT AREA
+   Remove the 800px cap. Let content fill the
+   space beside the sidebar naturally.
+   ============================================ */
+
+.main-content {
+  flex: 1;
+  max-width: 100%;      /* was 800px */
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+  min-width: 0;         /* prevent flex overflow */
+}
+
+/* ============================================
+   2. CONTAINER WIDTHS
+   Widen the narrow 720px containers to make
+   better use of desktop real estate.
+   ============================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Content sections: narrative + slide side-by-side needs room */
+.content-section .container {
+  max-width: 1060px;    /* was 720px */
+}
+
+/* Executive summary: wider editorial column */
+.exec-summary .container {
+  max-width: 860px;     /* was 720px */
+}
+
+/* Quick take: moderate widening */
+.quick-take .container {
+  max-width: 800px;     /* was 720px */
+}
+
+/* Q&A: moderate widening */
+.qa-section .container {
+  max-width: 800px;     /* was 720px */
+}
+
+/* Hero: wider to let video breathe */
+.hero .container {
+  max-width: 960px;     /* was 800px */
+}
+
+/* Closing CTA: slightly wider */
+.closing .container {
+  max-width: 720px;     /* was 640px */
+}
+
+/* Overview: let cards fill wider space */
+.overview-grid {
+  max-width: 1060px;    /* was 900px */
+}
+
+/* ============================================
+   3. HERO: WIDESCREEN IMPROVEMENTS
+   Wider video embed, more breathing room.
+   ============================================ */
+
+.video-embed {
+  max-width: 840px;     /* was 720px */
+}
+
+.hero__subtitle {
+  max-width: 720px;     /* was 640px */
+}
+
+.slide-card--hero {
+  max-width: 600px;     /* was 520px */
+}
+
+/* ============================================
+   4. SIDE-BY-SIDE SLIDE + NARRATIVE LAYOUT
+   Uses a .content-body wrapper around
+   .section-narrative + .slide-card elements.
+   See layout-changes.md for the HTML change.
+   ============================================ */
+
+/* Desktop: side-by-side grid */
+@media (min-width: 1025px) {
+  .content-body {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 0 48px;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+
+  .content-body .section-narrative {
+    margin-bottom: 0;   /* grid handles spacing */
+  }
+
+  .content-body .slide-card {
+    margin: 0;           /* reset top/bottom margins */
+    position: sticky;
+    top: calc(var(--topbar-height) + 24px);
+  }
+
+  /* When there's no slide-card, narrative spans full width */
+  .content-body--full .section-narrative {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================
+   5. EXECUTIVE SUMMARY: EDITORIAL LAYOUT
+   Drop cap and wider measure for a more
+   magazine-like reading experience.
+   ============================================ */
+
+@media (min-width: 1025px) {
+  .exec-summary__body {
+    font-size: 17px;      /* was 16px */
+    line-height: 1.85;
+    columns: 2;
+    column-gap: 48px;
+    column-rule: 1px solid var(--border);
+  }
+
+  .exec-summary__body p {
+    break-inside: avoid;
+  }
+
+  .exec-summary h2 {
+    column-span: all;
+  }
+}
+
+/* ============================================
+   6. FULL-BLEED QUOTE: WIDESCREEN FIX
+   Recalculate margins for wider content area.
+   ============================================ */
+
+@media (min-width: 1025px) {
+  .full-bleed-quote {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .full-bleed-quote blockquote {
+    max-width: 800px;    /* was 700px */
+  }
+}
+
+/* ============================================
+   7. GRIDS: WIDESCREEN ENHANCEMENTS
+   Better use of space for card grids at 1440px+.
+   ============================================ */
+
+/* Case studies: stay 2-col but wider cards */
+@media (min-width: 1025px) {
+  .case-studies {
+    gap: 24px;           /* was 20px */
+  }
+}
+
+/* Disruption index: comfortable 2x2 */
+@media (min-width: 1025px) {
+  .disruption-grid {
+    gap: 20px;           /* was 16px */
+  }
+}
+
+/* Section divider slides: wider */
+.section-divider-slide {
+  max-width: 860px;     /* was 720px */
+}
+
+/* ============================================
+   8. ULTRA-WIDE BREAKPOINT (1600px+)
+   Gentle cap to prevent excessively wide lines.
+   ============================================ */
+
+@media (min-width: 1600px) {
+  .content-section .container {
+    max-width: 1100px;
+  }
+
+  .exec-summary .container {
+    max-width: 920px;
+  }
+
+  .hero .container {
+    max-width: 1000px;
+  }
+
+  .content-body {
+    grid-template-columns: 1fr 420px;
+    gap: 0 56px;
+  }
+}
+
+/* ============================================
+   9. RESPONSIVE OVERRIDES
+   Ensure tablet and mobile behavior is preserved.
+   ============================================ */
+
+/* Tablet: sidebar hidden, content fills screen */
+@media (max-width: 1024px) {
+  .main-content {
+    max-width: 100%;
+    padding: 0 32px;
+  }
+
+  .content-section .container,
+  .exec-summary .container,
+  .quick-take .container,
+  .qa-section .container {
+    max-width: 100%;
+  }
+
+  /* Content body: single column on tablet */
+  .content-body {
+    display: block;
+  }
+
+  .content-body .slide-card {
+    margin: 32px 0;
+    position: static;
+  }
+
+  .content-body .section-narrative {
+    margin-bottom: 40px;
+  }
+
+  /* Executive summary: single column */
+  .exec-summary__body {
+    columns: 1;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .section-divider-slide {
+    max-width: 100%;
+    padding: 0 32px;
+  }
+}
+
+/* Mobile: everything stacks, reduced padding */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0 20px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section-divider-slide {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0 16px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-divider-slide {
+    padding: 0 16px;
+  }
+}
